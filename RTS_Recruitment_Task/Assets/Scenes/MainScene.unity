@@ -306,7 +306,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183853250
 GameObject:
@@ -450,6 +450,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2793645276471875026}
     m_Modifications:
+    - target: {fileID: 3039387113434643156, guid: e94494970c095a84ba6114ba9147f347,
+        type: 3}
+      propertyPath: <CurrentHighlighter>k__BackingField
+      value: 
+      objectReference: {fileID: 473733390}
     - target: {fileID: 3039387113434643156, guid: e94494970c095a84ba6114ba9147f347,
         type: 3}
       propertyPath: <CurrentGameplayController>k__BackingField
@@ -670,7 +675,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -869,7 +874,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -891,6 +896,51 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &473733389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473733391}
+  - component: {fileID: 473733390}
+  m_Layer: 0
+  m_Name: Highlighter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &473733390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473733389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9dce68cba83d34baee6a92e09523d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <HighlightPower>k__BackingField: 0.5
+--- !u!4 &473733391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473733389}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.747104, y: 2.2432652, z: 2.274641}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510091172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1585,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &791532928
 GameObject:
@@ -1718,7 +1768,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842779905
 GameObject:
@@ -1749,7 +1799,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &845871480
 GameObject:
@@ -3160,6 +3210,10 @@ MonoBehaviour:
   <ConfirmationPanel>k__BackingField: {fileID: 737338651}
   <InformationPanel>k__BackingField: {fileID: 1850215257}
   <MainCamera>k__BackingField: {fileID: 330585545}
+  <MaxRayDistance>k__BackingField: 50
+  <InteractableLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!4 &1470575652
 Transform:
   m_ObjectHideFlags: 0
@@ -3185,7 +3239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479232316}
   - component: {fileID: 1479232315}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CameraOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3219,7 +3273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479232314}
   m_LocalRotation: {x: -0, y: 0.000000014901159, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 5}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3325,7 +3379,7 @@ RectTransform:
   - {fileID: 892783646}
   - {fileID: 709941289}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4717,7 +4771,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2099830516
 GameObject:
@@ -4897,7 +4951,7 @@ PrefabInstance:
     - target: {fileID: 4311395506250921447, guid: ca4ae78ceefc7264a93e598324b48ec2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4311395506250921447, guid: ca4ae78ceefc7264a93e598324b48ec2,
         type: 3}
@@ -4966,6 +5020,11 @@ PrefabInstance:
       objectReference: {fileID: 2140206546}
     - target: {fileID: 8818220479826901216, guid: ca4ae78ceefc7264a93e598324b48ec2,
         type: 3}
+      propertyPath: <CurrentHighlighter>k__BackingField
+      value: 
+      objectReference: {fileID: 473733390}
+    - target: {fileID: 8818220479826901216, guid: ca4ae78ceefc7264a93e598324b48ec2,
+        type: 3}
       propertyPath: <CurrentGameplayController>k__BackingField
       value: 
       objectReference: {fileID: 658898839}
@@ -4986,13 +5045,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1774711644094987583, guid: 5e27db898a274e24fbc53853018ea8f3,
         type: 3}
+      propertyPath: <CurrentHighlighter>k__BackingField
+      value: 
+      objectReference: {fileID: 473733390}
+    - target: {fileID: 1774711644094987583, guid: 5e27db898a274e24fbc53853018ea8f3,
+        type: 3}
       propertyPath: <CurrentGameplayController>k__BackingField
       value: 
       objectReference: {fileID: 658898839}
     - target: {fileID: 2910711250472251202, guid: 5e27db898a274e24fbc53853018ea8f3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2910711250472251202, guid: 5e27db898a274e24fbc53853018ea8f3,
         type: 3}
