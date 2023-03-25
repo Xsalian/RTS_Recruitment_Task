@@ -217,7 +217,7 @@ MonoBehaviour:
   <CurrentAnimator>k__BackingField: {fileID: 256469585530571048}
   <RendererCollection>k__BackingField:
   - {fileID: 6772523477607292319}
-  <HighlightPower>k__BackingField: 0.5
+  <CurrentHighlighter>k__BackingField: {fileID: 0}
 --- !u!95 &256469585530571048
 Animator:
   serializedVersion: 4
