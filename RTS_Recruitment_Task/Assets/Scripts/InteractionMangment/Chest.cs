@@ -21,18 +21,21 @@ namespace Recruitment.InteractionManagment
         [field: SerializeField]
         private Highlighter CurrentHighlighter { get; set; }
 
+        private bool IsChestClosed { get; set; } = true;
+
         private const string OPEN_CHEST_TRIGGER = "OpenChest";
         private const string IDLE_CHEST_TRIGGER = "ResetChest";
 
         public void Interaction ()
         {
+            IsChestClosed = false;
             Contents.SetActive(true);
             CurrentAnimator.SetTrigger(OPEN_CHEST_TRIGGER);
         }
 
         public bool CanInteract ()
         {
-            return true;
+            return IsChestClosed == true;
         }
 
         public void Highlight()
@@ -68,6 +71,7 @@ namespace Recruitment.InteractionManagment
         private void HandleOnGameEnded ()
         {
             CurrentAnimator.SetTrigger(IDLE_CHEST_TRIGGER);
+            IsChestClosed = true;
         }
     }
 }
