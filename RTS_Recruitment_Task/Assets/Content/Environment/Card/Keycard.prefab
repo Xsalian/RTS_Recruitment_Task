@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5411361059718042226}
   - component: {fileID: 3039387113434643156}
   - component: {fileID: 2567608952936800487}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Keycard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,6 +102,9 @@ MonoBehaviour:
   <ConfirmationText>k__BackingField: Take?
   <InformationText>k__BackingField: 
   <CurrentGameplayController>k__BackingField: {fileID: 0}
+  <RendererCollection>k__BackingField:
+  - {fileID: 5411361059718042226}
+  <HighlightPower>k__BackingField: 0.5
 --- !u!65 &2567608952936800487
 BoxCollider:
   m_ObjectHideFlags: 0
