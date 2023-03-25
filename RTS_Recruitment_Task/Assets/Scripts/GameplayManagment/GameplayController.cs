@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,13 +11,17 @@ namespace Recruitment.GameplayManagment
         public Action<float> TimerValueChanged = delegate { };
 
         [field: SerializeField]
-        private List<MonoBehaviour> PlayerMechanicCollection = new();
+        private List<MonoBehaviour> PlayerMechanicCollection { get; set; } = new();
+        [field: SerializeField]
+        private GameObject SuccessEffect { get; set; }
+        [field: SerializeField]
+        private float EffectDuration { get; set; }
 
         public bool IsKeyCollected { get; set; }
         public float CurrentTime { get; private set; }
-        public float BestTime { get; private set; }
         public bool IsTimerStop { get; private set; } = true;
         private int LastSecond { get; set; }
+        private WaitForSeconds WaitForEffectDuration { get; set; }
 
         public void StartGame ()
         {
@@ -29,7 +34,8 @@ namespace Recruitment.GameplayManagment
         {
             SetPlayerMechanicsEnableState(false);
             IsTimerStop = true;
-            GameEnded.Invoke();
+            SuccessEffect.SetActive(true);
+            StartCoroutine(WaitForEffectEnd());
         }
 
         public void SetPlayerMechanicsEnableState (bool state)
@@ -40,9 +46,19 @@ namespace Recruitment.GameplayManagment
             }
         }
 
+        protected virtual void Awake ()
+        {
+            Initialize();
+        }
+
         protected virtual void Update ()
         {
             TimerCountdown();
+        }
+
+        private void Initialize ()
+        {
+            WaitForEffectDuration = new WaitForSeconds(EffectDuration);
         }
 
         private void ResetTimer ()
@@ -65,6 +81,13 @@ namespace Recruitment.GameplayManagment
                     TimerValueChanged.Invoke(CurrentTime);
                 }
             }
+        }
+
+        private IEnumerator WaitForEffectEnd ()
+        {
+            yield return WaitForEffectDuration;
+            SuccessEffect.SetActive(false);
+            GameEnded.Invoke();
         }
     }
 }
