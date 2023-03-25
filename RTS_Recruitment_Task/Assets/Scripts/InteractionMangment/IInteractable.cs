@@ -6,5 +6,7 @@ namespace Recruitment.InteractionManagment
         public string InformationText { get; set; }
         public void Interaction();
         public bool CanInteract();
+        public void Highlight();
+        public void StopHighlight();
     }
 }
