@@ -1,4 +1,5 @@
 using Recruitment.GameplayManagment;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Recruitment.InteractionManagment
@@ -13,6 +14,10 @@ namespace Recruitment.InteractionManagment
         private GameplayController CurrentGameplayController { get; set; }
         [field: SerializeField]
         private Animator CurrentAnimator { get; set; }
+        [field: SerializeField]
+        private List<Renderer> RendererCollection { get; set; } = new();
+        [field: SerializeField]
+        private Highlighter CurrentHighlighter { get; set; }
 
         private const string OPEN_DOOR_TRIGGER = "OpenDoor";
         private const string IDLE_DOOR_TRIGGER = "ResetDoor";
@@ -28,27 +33,37 @@ namespace Recruitment.InteractionManagment
             return CurrentGameplayController.IsKeyCollected == true;
         }
 
-        protected virtual void Start()
+        public void Highlight ()
+        {
+            CurrentHighlighter.ChangeHighlightColor(RendererCollection, true);
+        }
+
+        public void StopHighlight ()
+        {
+            CurrentHighlighter.ChangeHighlightColor(RendererCollection, false);
+        }
+
+        protected virtual void Start ()
         {
             AttachToEvent();
         }
 
-        protected virtual void OnDestroy()
+        protected virtual void OnDestroy ()
         {
             DetachFromEvent();
         }
 
-        private void AttachToEvent()
+        private void AttachToEvent ()
         {
             CurrentGameplayController.GameEnded += HandleOnGameEnded;
         }
 
-        private void DetachFromEvent()
+        private void DetachFromEvent ()
         {
             CurrentGameplayController.GameEnded -= HandleOnGameEnded;
         }
 
-        private void HandleOnGameEnded()
+        private void HandleOnGameEnded ()
         {
             CurrentAnimator.SetTrigger(IDLE_DOOR_TRIGGER);
         }

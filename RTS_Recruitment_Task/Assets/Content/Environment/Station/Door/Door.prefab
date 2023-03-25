@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1782393748671986235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3672810096467484201}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bone.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 868659594440166607}
   - component: {fileID: 4078310394934239202}
   - component: {fileID: 690172901783639399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane.037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 9090111660362696674}
   - component: {fileID: 6864718948196196815}
   - component: {fileID: 256469585530571048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,6 +215,9 @@ MonoBehaviour:
   <InformationText>k__BackingField: You need a key!
   <CurrentGameplayController>k__BackingField: {fileID: 0}
   <CurrentAnimator>k__BackingField: {fileID: 256469585530571048}
+  <RendererCollection>k__BackingField:
+  - {fileID: 6772523477607292319}
+  <HighlightPower>k__BackingField: 0.5
 --- !u!95 &256469585530571048
 Animator:
   serializedVersion: 4
@@ -244,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5300677940860356743}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Armature.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4311483874677981875}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7509591551610255675}
   - component: {fileID: 6772523477607292319}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
