@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8818220479826901216}
   - component: {fileID: 2801094487245080829}
   - component: {fileID: 8821798278702040640}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,6 +52,12 @@ MonoBehaviour:
   <ConfirmationText>k__BackingField: Open?
   <InformationText>k__BackingField: 
   <Contents>k__BackingField: {fileID: 0}
+  <CurrentAnimator>k__BackingField: {fileID: 0}
+  <CurrentGameplayController>k__BackingField: {fileID: 0}
+  <RendererCollection>k__BackingField:
+  - {fileID: 593845816415298473}
+  - {fileID: 6666988613336979319}
+  <HighlightPower>k__BackingField: 0.5
 --- !u!65 &2801094487245080829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96,7 +102,7 @@ GameObject:
   - component: {fileID: 344138226980096488}
   - component: {fileID: 9024033277347200886}
   - component: {fileID: 593845816415298473}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8131387346146850792}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ContentsAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +217,7 @@ GameObject:
   - component: {fileID: 1123088055760071883}
   - component: {fileID: 1908832905375108838}
   - component: {fileID: 6666988613336979319}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
