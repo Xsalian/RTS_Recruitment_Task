@@ -19,6 +19,8 @@ namespace Recruitment.InteractionManagment
 
         private IInteractable CurrentInteractable { get; set; }
 
+        private const string EMPTY_STRING = "";
+
         protected virtual void Update ()
         {
             CastRay();
@@ -64,7 +66,7 @@ namespace Recruitment.InteractionManagment
                     {
                         ConfirmationPanel.DisplayConfirmationPanel(CurrentInteractable);
                     }
-                    else
+                    else if (CurrentInteractable.InformationText != EMPTY_STRING)
                     {
                         InformationPanel.DisplayPanel(CurrentInteractable);
                     }
