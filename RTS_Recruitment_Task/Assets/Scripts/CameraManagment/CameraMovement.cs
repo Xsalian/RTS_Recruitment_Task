@@ -1,4 +1,4 @@
-using Recruitment.InputMangment;
+using Recruitment.InputManagment;
 using UnityEngine;
 
 namespace Recruitment.CamerManagment
