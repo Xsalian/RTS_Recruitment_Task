@@ -7,7 +7,7 @@ namespace Recruitment.UI
     public class InformationView : View
     {
         [field: SerializeField]
-        public TextMeshProUGUI Label { get; set; }
+        private TextMeshProUGUI Label { get; set; }
 
         public void SetLabelText (string targetText)
         {
