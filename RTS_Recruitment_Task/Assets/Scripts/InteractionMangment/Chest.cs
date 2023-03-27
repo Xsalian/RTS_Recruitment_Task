@@ -38,12 +38,12 @@ namespace Recruitment.InteractionManagment
             return IsChestClosed == true;
         }
 
-        public void Highlight()
+        public void Highlight ()
         {
             CurrentHighlighter.ChangeHighlightColor(RendererCollection, true);
         }
 
-        public void StopHighlight()
+        public void StopHighlight ()
         {
             CurrentHighlighter.ChangeHighlightColor(RendererCollection, false);
         }
