@@ -8,14 +8,11 @@ namespace Recruitment.UI
     public class MainMenuView : View
     {
         [field: SerializeField]
-        private PlayerStatisticController CurrentPlayerStatisticController { get; set; }
-        [field: SerializeField]
         private TextMeshProUGUI TimeText { get; set; }
 
-        public void UpdateScoreTexts ()
+        public void ChangeScoreText (float value)
         {
-            float bestTime = CurrentPlayerStatisticController.GetBestTimeScore();
-            TimeText.text = GetTimeStringFromSecondsValue(bestTime);
+            TimeText.text = GetTimeStringFromSecondsValue(value);
         }
 
         private string GetTimeStringFromSecondsValue (float seconds)

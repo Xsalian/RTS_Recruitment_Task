@@ -14,15 +14,5 @@ namespace Recruitment.UI
             gameObject.SetActive(false);
             CurrentGameplayController.StartGame();
         }
-        
-        protected virtual void Awake ()
-        {
-            UpdateBestTimeText();
-        }
-
-        private void UpdateBestTimeText ()
-        {
-            CurrentView.UpdateScoreTexts();
-        }
     }
 }
