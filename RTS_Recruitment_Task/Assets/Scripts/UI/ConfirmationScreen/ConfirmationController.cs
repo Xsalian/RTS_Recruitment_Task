@@ -20,9 +20,8 @@ namespace Recruitment.UI
 
         public void ConfirmAction ()
         {
-            CurrentGameplayController.SetPlayerMechanicsEnableState(true);
             CurrentModel.ConfirmInteraction();
-            gameObject.SetActive(false);
+            CloseConfirmationPanel();
         }
 
         public void CloseConfirmationPanel ()
