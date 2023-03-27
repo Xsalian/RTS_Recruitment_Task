@@ -20,8 +20,8 @@ namespace Recruitment.UI
 
         public void ConfirmAction ()
         {
-            CurrentModel.ConfirmInteraction();
             CloseConfirmationPanel();
+            CurrentModel.ConfirmInteraction();
         }
 
         public void CloseConfirmationPanel ()
