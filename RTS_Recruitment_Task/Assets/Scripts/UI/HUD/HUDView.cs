@@ -9,31 +9,9 @@ namespace Recruitment.UI
     public class HUDView : View
     {
         [field: SerializeField]
-        private GameplayController CurrentGameplayController { get; set; }
-        [field: SerializeField]
         private TextMeshProUGUI TimerText { get; set; }
 
-        protected virtual void Start()
-        {
-            AttachToEvent();
-        }
-
-        protected virtual void OnDestroy()
-        {
-            DetachFromEvent();
-        }
-
-        private void AttachToEvent()
-        {
-            CurrentGameplayController.TimerValueChanged += HandleOnTimerValueChanged;
-        }
-
-        private void DetachFromEvent()
-        {
-            CurrentGameplayController.TimerValueChanged -= HandleOnTimerValueChanged;
-        }
-
-        private void HandleOnTimerValueChanged (float value)
+        public void ChangeTimerText (float value)
         {
             TimerText.text = GetTimeStringFromSecondsValue(value);
         }
