@@ -8,9 +8,9 @@ namespace Recruitment.InteractionManagment
         [field: SerializeField]
         private float HighlightPower { get; set; }
 
-        public void ChangeHighlightColor (List<Renderer> rendererCollection, bool isObjectHighlited)
+        public void ChangeHighlightColor (List<Renderer> rendererCollection, bool highlightObject)
         {
-            int mutiplier = isObjectHighlited ? 1 : -1;
+            int mutiplier = highlightObject ? 1 : -1;
             Color targetColor = new Color(HighlightPower, HighlightPower, HighlightPower) * mutiplier;
 
             for (int rendererIndex = 0; rendererIndex < rendererCollection.Count; rendererIndex++)
