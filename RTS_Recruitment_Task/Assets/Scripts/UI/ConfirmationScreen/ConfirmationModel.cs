@@ -7,7 +7,7 @@ namespace Recruitment.UI
     {
         private IInteractable CurrentInteractable { get; set; }
 
-        public void SetCurrentInteractable (IInteractable interactable) //TODO: CHECK IF IN THIS SITUATION TDA IS GOOD SOLUTION
+        public void SetCurrentInteractable (IInteractable interactable)
         {
             CurrentInteractable = interactable;
         }
